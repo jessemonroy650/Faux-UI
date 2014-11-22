@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Munibox Mockup</title>
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<script src='jquery-1.11.0.js'></script>
+	<link rel='stylesheet' type='text/css' href='css/default.css'>
+	<link rel='stylesheet' type='text/css' href='css/faux-buttons.css'>
+</head>
+<body>
+	<p class=spacer>
+	<div class=muniboxoff>
+		<div id=cbl class="controlBoxL boxoff">
+			<div id=full_button class="boxy faux-buttons">
+				<div id=fullLED_1 class="circle">&nbsp;</div>
+			</div>
+			<div id=empty_button class="boxy faux-buttons">
+				<div id=emptyLED_1 class="circle">&nbsp;</div>
+			</div>
+			<div id=offline_button class="boxy faux-buttons">
+				<div id=offlineLED_1 class="circle">&nbsp;</div>
+			</div>
+        </div>
+		<div id=cbr class="controlBoxR boxy">
+			<div id=shelfId>1</div>
+		</div>
+	</div>
+    <script>
+    /* The example: http://www.impressivewebs.com/css3-transitions-javascript/
+       SEE ALSO: css trigger transform translate
+    */
+    $(function(){
+        $('#full_button').click(function() {
+            $("#fullLED_1").toggleClass("red");
+            if ($("#emptyLED_1").hasClass("green")) {
+                $("#emptyLED_1").toggleClass("green");
+            }
+            if ($("#offlineLED_1").hasClass("blue")) {
+                $("#offlineLED_1").toggleClass("blue");
+            }
+        });
+        $('#empty_button').click(function() {
+            $("#emptyLED_1").toggleClass("green");
+            if ($("#fullLED_1").hasClass("red")) {
+                $("#fullLED_1").toggleClass("red");
+            }
+            if ($("#offlineLED_1").hasClass("blue")) {
+                $("#offlineLED_1").toggleClass("blue");
+            }
+        });
+        $('#offline_button').click(function() {
+            $("#offlineLED_1").toggleClass("blue");
+            if ($("#fullLED_1").hasClass("red")) {
+                $("#fullLED_1").toggleClass("red");
+            }
+            if ($("#emptyLED_1").hasClass("green")) {
+                $("#emptyLED_1").toggleClass("green");
+            }
+        });
+     });
+    </script>
+  </body>
+</html>
