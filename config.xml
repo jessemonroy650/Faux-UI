@@ -19,6 +19,8 @@
         <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">
         Jesse Monroy
         </author>
+        <gap:platform name="android" />
+        <preference name="permissions" value="none"/>
         <gap:plugin name="org.apache.cordova.device" />
 
     </widget>
