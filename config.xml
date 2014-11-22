@@ -1,0 +1,24 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.didgood.faux-ui.sliding-pane"
+        version     = "1.1"
+        versionCode = "10" >
+
+        <!-- versionCode is optional and Android only -->
+
+        <preference name="phonegap-version" value="3.5.0" />
+
+        <name>Faux Sliding Pane</name>
+
+        <description>
+         A Simple app that reports the screen size. It uses native call and JQuery.
+        </description>
+
+        <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">
+        Jesse Monroy
+        </author>
+        <gap:plugin name="org.apache.cordova.device" />
+
+    </widget>
