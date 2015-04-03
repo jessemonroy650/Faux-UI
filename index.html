@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes">
     <script src='jquery-1.11.0.js'></script>
     <link rel='stylesheet' type='text/css' href='css/default.css'>
-    <link rel='stylesheet' type='text/css' href='css/faux-panes.css'>
-	<script type="text/javascript" src=sliding-panes.js></script>
+    <link rel='stylesheet' type='text/css' href='css/faux-sliding-panes.css'>
+	<script type="text/javascript" src=faux-sliding-panes.js></script>
   </head>
   <body>
-
       <p>&nbsp;<p>
 	<div style=100%>
-      <div id=message class="boxr" style="">
+      <div id=message class="pane pane-hidden">
 		This is the right pane.
       </div>
-      <div id=leftpane class="boxe" style="">
+      <div id=leftpane class="boxe">
 		This is the left pane.
       </div>
 	</div>
@@ -24,15 +23,7 @@
     $(function(){
 		var j = 1;
         $('#leftpane').click(function() {
-            //console.log("button clicked.");
-			if ( $('.boxr').hasClass('box-slide') ) {
-				$('.boxr').removeClass('box-slide');
-	            //console.log("remove.");
-			} else {
-				$('.boxr').addClass('box-slide');
-	            //console.log("add.");
-			}
-			//SlidingPane.Toggle('message');
+			SlidingPane.Toggle('#message', 'pane-hidden', 'pane-slide');
         });
      });
     </script>
